@@ -20,5 +20,6 @@ function process($user, $password) {
         exit;
     }
     echo '<gps status="no" msg="user create failed" />';
+    exit;
 
 }
