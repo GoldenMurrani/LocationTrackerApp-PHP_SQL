@@ -6,8 +6,8 @@ if(!isset($_GET['magic']) || $_GET['magic'] != "NechAtHa6RuzeR8x") {
     echo '<gps status="no" msg="magic" />';
     exit;
 }
-//TODO: figure out why project3testing.php still sends the fields with these tags instead of lat/lng
-process($_GET['user'], $_GET['pw']);
+
+process($_GET['lat'], $_GET['lng']);
 
 function process($lat, $lng) {
     $pdo = pdo_connect();

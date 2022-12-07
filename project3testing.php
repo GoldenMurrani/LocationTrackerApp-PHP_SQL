@@ -5,8 +5,10 @@ $title = "CSE476 proj2 Test Page";
 //  android application.
 //
 
-$input1 = "test";
-$input2 = "test";
+$user = "test";
+$pass = "test";
+$lat = "test";
+$long = "test";
 
 $base_url = "https://webdev.cse.msu.edu/~kroskema/cse476/project3/"; // verify that this is the correct path to your web site
 $magic = "NechAtHa6RuzeR8x";
@@ -23,16 +25,16 @@ $magic = "NechAtHa6RuzeR8x";
     browser "View page source" option to see the results.</p>
 
 <form method="get" target="_blank" action="<?php echo $base_url; ?>gps-validateuser.php">
-    <p>Userid: <input type="text" name="user" value="<?php echo $input1;?>"/></p>
+    <p>Userid: <input type="text" name="user" value="<?php echo $user;?>"/></p>
     <p>magic: <input type="text" name="magic" value="<?php echo $magic;?>"/></p>
-    <p>Password: <input type="text" name="pw" value="<?php echo $input2;?>"/></p>
+    <p>Password: <input type="text" name="pw" value="<?php echo $pass;?>"/></p>
     <p><input type="submit" value="Test validate user" /></p>
 </form>
 
 <form method="post" target="_blank" action="<?php echo $base_url; ?>gps-createuser.php">
-    <p>Userid: <input type="text" name="user" value="<?php echo $input1;?>"/></p>
+    <p>Userid: <input type="text" name="user" value="<?php echo $user;?>"/></p>
     <p>magic: <input type="text" name="magic" value="<?php echo $magic;?>"/></p>
-    <p>Password: <input type="text" name="pw" value="<?php echo $input2;?>"/></p>
+    <p>Password: <input type="text" name="pw" value="<?php echo $pass;?>"/></p>
     <p><input type="submit" value="Test create user" /></p>
 </form>
 
@@ -42,9 +44,9 @@ $magic = "NechAtHa6RuzeR8x";
 </form>
 
 <form method="get" target="_blank" action="<?php echo $base_url; ?>gps-checkhere.php">
-    <p>lat: <input type="text" name="lat" value="<?php echo $input1;?>"/></p>
+    <p>lat: <input type="text" name="lat" value="<?php echo $lat;?>"/></p>
     <p>magic: <input type="text" name="magic" value="<?php echo $magic;?>"/></p>
-    <p>lng: <input type="text" name="lng" value="<?php echo $input2;?>"/></p>
+    <p>lng: <input type="text" name="lng" value="<?php echo $long;?>"/></p>
     <p><input type="submit" value="Test checkhere" /></p>
 </form>
 
