@@ -36,5 +36,10 @@ $magic = "NechAtHa6RuzeR8x";
     <p><input type="submit" value="Test create user" /></p>
 </form>
 
+<form method="get" target="_blank" action="<?php echo $base_url; ?>gps-getlocations.php">
+    <p>magic: <input type="text" name="magic" value="<?php echo $magic;?>"/></p>
+    <p><input type="submit" value="Test get locations" /></p>
+</form>
+
 </body>
 </html>

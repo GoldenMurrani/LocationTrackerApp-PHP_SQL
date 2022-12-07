@@ -10,7 +10,6 @@ if(!isset($_GET['magic']) || $_GET['magic'] != "NechAtHa6RuzeR8x") {
 process($_GET['user'], $_GET['pw']);
 
 function process($user, $password) {
-    // Connect to the database
     $pdo = pdo_connect();
     $userQ = $pdo->quote($user);
     $query = "select Password from GpsUser where Username=$userQ";
