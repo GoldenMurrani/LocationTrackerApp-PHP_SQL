@@ -6,8 +6,8 @@ if(!isset($_GET['magic']) || $_GET['magic'] != "NechAtHa6RuzeR8x") {
     echo '<gps status="no" msg="magic" />';
     exit;
 }
-
-process($_GET['lat'], $_GET['lng']);
+//TODO: figure out why project3testing.php still sends the fields with these tags instead of lat/lng
+process($_GET['user'], $_GET['pw']);
 
 function process($lat, $lng) {
     $pdo = pdo_connect();
@@ -15,7 +15,9 @@ function process($lat, $lng) {
     $rows = $pdo->query($query);
     if($row = $rows->fetch()) {
         // We found a valid location at the users position
-        echo '<gps status="yes" msg="check success" name="{$row['name']}" id="{$row['id']}" />';
+//        echo '<gps status="yes" msg="check success" name="{$row['name']}" id="{$row['id']}" />';
+        echo "<gps status='yes' msg='check success' name='{$row['name']}' id='{$row['id']}' />";
+//        echo "<chess status='yes' msg='game found' gamestate = '{$row['gamestate']}' turn = '{$row['turn']}' />";
         exit;
     }
     echo '<gps status="no" msg="check error" />';
