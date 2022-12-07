@@ -11,14 +11,16 @@ process();
 
 function process() {
     $pdo = pdo_connect();
-    $query = "select id, name from GpsLocation";
+    $query = "select id, name, lat, lng from GpsLocation";
     $rows = $pdo->query($query);
     echo "<gps status=\"yes\">";
     foreach($rows as $row ) {
         $id = $row['id'];
         $name = $row['name'];
+        $lat = $row['lat'];
+        $long = $row['lng'];
 
-        echo "<location id=\"$id\" name=\"$name\" />\r\n";
+        echo "<location id=\"$id\" name=\"$name\" lat=\"$lat\" long=\"$long\"/>\r\n";
     }
     echo "</gps>";
 
