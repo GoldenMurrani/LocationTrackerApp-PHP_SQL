@@ -12,7 +12,7 @@ process($_GET['user'], $_GET['pw']);
 function process($user, $password) {
     $pdo = pdo_connect();
     $userQ = $pdo->quote($user);
-    $query = "select Password from GpsUser where Username=$userQ";
+    $query = "SELECT ID, Password from GpsUser where username=$userQ";
     $rows = $pdo->query($query);
     if($row = $rows->fetch()) {
         // We found the record in the database
