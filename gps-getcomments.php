@@ -11,7 +11,7 @@ process($_GET['locId']);
 
 function process($locId) {
     $pdo = pdo_connect();
-    $query = "SELECT GpsUser.Username, GpsComment.comment FROM GpsUser JOIN GpsComment ON GpsUser.ID=GpsComment.user WHERE GpsComment.location=1;";
+    $query = "SELECT GpsUser.Username, GpsComment.comment FROM GpsUser JOIN GpsComment ON GpsUser.ID=GpsComment.user WHERE GpsComment.location=$locId;";
     $rows = $pdo->query($query);
     echo "<gps status=\"yes\">";
     foreach($rows as $row ) {
