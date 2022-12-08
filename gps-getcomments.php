@@ -13,12 +13,12 @@ function process($locId) {
     $pdo = pdo_connect();
     $query = "SELECT GpsUser.Username, GpsComment.comment FROM GpsUser JOIN GpsComment ON GpsUser.ID=GpsComment.user WHERE GpsComment.location=$locId;";
     $rows = $pdo->query($query);
-    echo "<gps status=\"yes\">";
+    echo "<gps status=\"yes\">\r\n";
     foreach($rows as $row ) {
         $user = $row['Username'];
         $comment = $row['comment'];
 
-        echo "<comment user=\"$user\" comment=\"$comment\" />\r\n";
+        echo "    <comment user=\"$user\" comment=\"$comment\" />\r\n";
     }
     echo "</gps>";
 
