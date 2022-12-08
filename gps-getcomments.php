@@ -18,7 +18,7 @@ function process($locId) {
         $user = $row['Username'];
         $comment = $row['comment'];
 
-        echo "    <comment user=\"$user\" comment=\"$comment\" />\r\n";
+        echo "    <comments user=\"$user\" comment=\"$comment\" />\r\n";
     }
     echo "</gps>";
 
