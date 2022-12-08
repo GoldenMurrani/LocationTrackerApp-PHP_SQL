@@ -18,9 +18,9 @@ function process() {
         $id = $row['id'];
         $name = $row['name'];
         $lat = $row['lat'];
-        $long = $row['lng'];
+        $lng = $row['lng'];
 
-        echo "<location id=\"$id\" name=\"$name\" lat=\"$lat\" long=\"$long\"/>\r\n";
+        echo "<location id=\"$id\" name=\"$name\" lat=\"$lat\" lng=\"$lng\"/>\r\n";
     }
     echo "</gps>";
 
