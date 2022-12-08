@@ -22,7 +22,7 @@ function process($user, $password) {
             exit;
         }
 
-        $id = $row['id'];
+        $id = $row['ID'];
         $status = "yes";
         $msg = "user is valid";
 
