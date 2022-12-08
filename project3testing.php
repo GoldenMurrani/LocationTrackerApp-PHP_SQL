@@ -1,5 +1,5 @@
 <?php
-$title = "CSE476 proj2 Test Page";
+$title = "CSE476 proj3 Test Page";
 //
 //  The user and password below are those you used in your
 //  android application.
@@ -20,16 +20,13 @@ $magic = "NechAtHa6RuzeR8x";
 </head>
 <body>
 <h1><?php echo $title; ?></h1>
-<h2>p2 Testing</h2>
-<p>Paste the valid xml created to save a hatting in the input box below,
-    then click the "Test create" Button. On the new page that appears use the
-    browser "View page source" option to see the results.</p>
+<h2>p3 Testing</h2>
 
-<form method="get" target="_blank" action="<?php echo $base_url; ?>gps-validateuser.php">
-    <p>Userid: <input type="text" name="user" value="<?php echo $user;?>"/></p>
+<form method="get" target="_blank" action="<?php echo $base_url; ?>gps-checkhere.php">
+    <p>lat: <input type="text" name="lat" value="<?php echo $lat;?>"/></p>
     <p>magic: <input type="text" name="magic" value="<?php echo $magic;?>"/></p>
-    <p>Password: <input type="text" name="pw" value="<?php echo $pass;?>"/></p>
-    <p><input type="submit" value="Test validate user" /></p>
+    <p>lng: <input type="text" name="lng" value="<?php echo $long;?>"/></p>
+    <p><input type="submit" value="Test checkhere" /></p>
 </form>
 
 <form method="post" target="_blank" action="<?php echo $base_url; ?>gps-createuser.php">
@@ -39,22 +36,22 @@ $magic = "NechAtHa6RuzeR8x";
     <p><input type="submit" value="Test create user" /></p>
 </form>
 
+<form method="get" target="_blank" action="<?php echo $base_url; ?>gps-getcomments.php">
+    <p>locid: <input type="text" name="locId" value="<?php echo $locid;?>"/></p>
+    <p>magic: <input type="text" name="magic" value="<?php echo $magic;?>"/></p>
+    <p><input type="submit" value="Test checkhere" /></p>
+</form>
+
 <form method="get" target="_blank" action="<?php echo $base_url; ?>gps-getlocations.php">
     <p>magic: <input type="text" name="magic" value="<?php echo $magic;?>"/></p>
     <p><input type="submit" value="Test get locations" /></p>
 </form>
 
-<form method="get" target="_blank" action="<?php echo $base_url; ?>gps-checkhere.php">
-    <p>lat: <input type="text" name="lat" value="<?php echo $lat;?>"/></p>
+<form method="get" target="_blank" action="<?php echo $base_url; ?>gps-validateuser.php">
+    <p>Userid: <input type="text" name="user" value="<?php echo $user;?>"/></p>
     <p>magic: <input type="text" name="magic" value="<?php echo $magic;?>"/></p>
-    <p>lng: <input type="text" name="lng" value="<?php echo $long;?>"/></p>
-    <p><input type="submit" value="Test checkhere" /></p>
-</form>
-
-<form method="get" target="_blank" action="<?php echo $base_url; ?>gps-getcomments.php">
-    <p>locid: <input type="text" name="locId" value="<?php echo $locid;?>"/></p>
-    <p>magic: <input type="text" name="magic" value="<?php echo $magic;?>"/></p>
-    <p><input type="submit" value="Test checkhere" /></p>
+    <p>Password: <input type="text" name="pw" value="<?php echo $pass;?>"/></p>
+    <p><input type="submit" value="Test validate user" /></p>
 </form>
 
 </body>
