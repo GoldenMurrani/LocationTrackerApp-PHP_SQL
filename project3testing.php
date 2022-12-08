@@ -30,7 +30,7 @@ $magic = "NechAtHa6RuzeR8x";
 </form>
 
 <form method="post" target="_blank" action="<?php echo $base_url; ?>gps-createuser.php">
-    <p>Userid: <input type="text" name="user" value="<?php echo $user;?>"/></p>
+    <p>Username: <input type="text" name="user" value="<?php echo $user;?>"/></p>
     <p>magic: <input type="text" name="magic" value="<?php echo $magic;?>"/></p>
     <p>Password: <input type="text" name="pw" value="<?php echo $pass;?>"/></p>
     <p><input type="submit" value="Test create user" /></p>
@@ -48,7 +48,7 @@ $magic = "NechAtHa6RuzeR8x";
 </form>
 
 <form method="get" target="_blank" action="<?php echo $base_url; ?>gps-validateuser.php">
-    <p>Userid: <input type="text" name="user" value="<?php echo $user;?>"/></p>
+    <p>Username: <input type="text" name="user" value="<?php echo $user;?>"/></p>
     <p>magic: <input type="text" name="magic" value="<?php echo $magic;?>"/></p>
     <p>Password: <input type="text" name="pw" value="<?php echo $pass;?>"/></p>
     <p><input type="submit" value="Test validate user" /></p>
