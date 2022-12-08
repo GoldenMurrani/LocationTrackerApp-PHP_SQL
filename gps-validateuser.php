@@ -21,7 +21,11 @@ function process($user, $password) {
             echo '<gps status="no" msg="password error" />';
             exit;
         }
-        echo '<gps status="yes" msg="user is valid" />';
+
+        $id = $row['id'];
+
+        //echo '<gps status="yes" id=\"$id\" msg="user is valid" />';
+        echo "<gps status=\"yes\" id=\"$id\" msg=\"user is valid\"/>\r\n";
         exit;
     }
     echo '<gps status="no" msg="user error" />';
