@@ -39,7 +39,7 @@ $magic = "NechAtHa6RuzeR8x";
 <form method="get" target="_blank" action="<?php echo $base_url; ?>gps-getcomments.php">
     <p>locid: <input type="text" name="locId" value="<?php echo $locid;?>"/></p>
     <p>magic: <input type="text" name="magic" value="<?php echo $magic;?>"/></p>
-    <p><input type="submit" value="Test checkhere" /></p>
+    <p><input type="submit" value="Test getcomments" /></p>
 </form>
 
 <form method="get" target="_blank" action="<?php echo $base_url; ?>gps-getlocations.php">
