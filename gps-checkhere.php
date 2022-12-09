@@ -12,7 +12,7 @@ process($_GET['lat'], $_GET['lng']);
 function process($lat, $lng) {
     $pdo = pdo_connect();
 //    $query = "SELECT id, name FROM GpsLocation WHERE ABS(lat-$lat)<=0.000045 AND ABS(lng-$lng)<=0.000045";
-    $query = "SELECT id, name FROM GpsLocation WHERE ABS(lat-$lat)<=0.000145 AND ABS(lng-$lng)<=0.000145";
+    $query = "SELECT id, name FROM GpsLocation WHERE ABS(lat-$lat)<=0.000245 AND ABS(lng-$lng)<=0.000245";
     $rows = $pdo->query($query);
     if($row = $rows->fetch()) {
         // We found a valid location at the users position
