@@ -10,6 +10,8 @@ $pass = "test";
 $lat = "test";
 $long = "test";
 $locid = "test";
+$comment = "test";
+$userid = "test";
 
 $base_url = "https://webdev.cse.msu.edu/~kroskema/cse476/project3/"; // verify that this is the correct path to your web site
 $magic = "NechAtHa6RuzeR8x";
@@ -27,6 +29,14 @@ $magic = "NechAtHa6RuzeR8x";
     <p>magic: <input type="text" name="magic" value="<?php echo $magic;?>"/></p>
     <p>lng: <input type="text" name="lng" value="<?php echo $long;?>"/></p>
     <p><input type="submit" value="Test checkhere" /></p>
+</form>
+
+<form method="post" target="_blank" action="<?php echo $base_url; ?>gps-createcomment.php">
+    <p>Userid: <input type="text" name="userid" value="<?php echo $userid;?>"/></p>
+    <p>magic: <input type="text" name="magic" value="<?php echo $magic;?>"/></p>
+    <p>locationid: <input type="text" name="locationid" value="<?php echo $locid;?>"/></p>
+    <p>comment: <input type="text" name="comment" value="<?php echo $comment;?>"/></p>
+    <p><input type="submit" value="Test create comment" /></p>
 </form>
 
 <form method="post" target="_blank" action="<?php echo $base_url; ?>gps-createuser.php">
